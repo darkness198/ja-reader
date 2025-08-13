@@ -1,0 +1,43 @@
+export default {
+  name: "ja-reader",
+  slug: "ja-reader",
+  version: "1.0.0",
+  orientation: "portrait",
+  icon: "./assets/images/icon.png",
+  scheme: "ja-reader",
+  userInterfaceStyle: "automatic",
+  newArchEnabled: true, 
+  ios: {
+    supportsTablet: true
+  },
+  android: {
+    adaptiveIcon: {
+      foregroundImage: "./assets/images/adaptive-icon.png",
+      backgroundColor: "#ffffff"
+    },
+    edgeToEdgeEnabled: true
+  },
+  web: {
+    bundler: "metro",
+    output: "static",
+    favicon: "./assets/images/favicon.png",
+    
+    baseUrl: "/ja-reader/"
+  },
+  plugins: [
+    "expo-router",
+    [
+      "expo-splash-screen",
+      {
+        "image": "./assets/images/splash-icon.png",
+        "imageWidth": 200,
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      }
+    ],
+    "expo-asset"
+  ],
+  experiments: {
+    typedRoutes: true
+  }
+};
