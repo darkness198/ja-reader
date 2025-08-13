@@ -76,8 +76,13 @@ export const BaseDetailsPanel: React.FC<BaseDetailsPanelProps> = ({
   const player = useAudioPlayer(audioUri|| undefined);
 
   const handlePlayAudio = () => {
-    // selectedItem && speakJapanese((selectedItem as any)?.fullText?.ja)
+    if(!selectedItem?.audioUri) {
+      selectedItem && speakJapanese((selectedItem as any)?.fullText?.ja || (selectedItem as any)?.text?.ja)
+      console.warn('using browser audio')
+      return
+    }
     if (!audioUri) {
+
       console.warn("No audio URI available for playback.");
       return;
     }
