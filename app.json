@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "viewbookv1",
-    "slug": "viewbookv1",
+    "name": "ja-reader",
+    "slug": "ja-reader",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "viewbookv1",
+    "scheme": "ja-reader",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -22,7 +22,7 @@
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
-      "homepage": "https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>"
+      "baseUrl": "/ja-reader/"
     },
     "plugins": [
       "expo-router",
